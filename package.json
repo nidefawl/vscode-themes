@@ -1,0 +1,198 @@
+{
+   "name": "nidefawl-vscode-themes",
+   "displayName": "Nidefawl - Colorful Semantic Highlighting",
+   "description": "Colorful Semantic highlighting, with focus on C++. In purple!",
+   "publisher": "nidefawl",
+   "private": "true",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/nidefawl/xxxx"
+   },
+   "homepage": "https://github.com/nidefawl/xxxx",
+   "version": "0.1.43",
+   "engines": {
+      "vscode": "^1.63.0"
+   },
+   "categories": [
+      "Themes"
+   ],
+   "files": [
+      "themes/nidefawl-purple-high-contrast-theme.json"
+   ],
+   "contributes": {
+      "configuration": {},
+      "themes": [
+         {
+            "id": "nidefawl-purple-high-contrast",
+            "label": "Nidefawl Purple High Contrast",
+            "uiTheme": "hc-black",
+            "path": "./themes/nidefawl-purple-high-contrast-theme.json"
+         }
+      ],
+      "semanticTokenScopes": [
+         {
+            "scopes": {
+               "parameter": [
+                  "variable.parameter.function",
+                  "variable.parameter.function-call",
+                  "meta.function.parameter",
+                  "meta.function.parameters",
+                  "variable.parameter"
+               ],
+               "source": [
+                  "source",
+                  "variable",
+                  "comment.line",
+                  "meta.function-call.c"
+               ],
+               "comment": [
+                  "comment",
+                  "comment.block",
+                  "comment.line"
+               ],
+               "commentDef": [
+                  "punctuation.definition.comment"
+               ],
+               "constantliteral": [
+                  "constant.numeric.decimal",
+                  "constant.numeric"
+               ],
+               "constantliteralDef": [
+                  "keyword.other.unit"
+               ],
+               "function": [
+                  "function",
+                  "entity.name.function",
+                  "support.function.builtin",
+                  "support.function.misc",
+                  "support.function",
+                  "meta.function-call"
+               ],
+               "variable": [
+                  "variable",
+                  "variable.other",
+                  "variable.other.readwrite",
+                  "support.variable",
+                  "markup.heading"
+               ],
+               "variable.readonly": [
+                  "entity.name.tag"
+               ],
+               "namespace": [
+                  "meta.symbol.namespace",
+                  "entity.name.scope-resolution",
+                  "entity.name.section"
+               ],
+               "property": [
+                  "property",
+                  "entity.name.tag.yaml",
+                  "entity.other.attribute-name",
+                  "keyword.other.definition",
+                  "meta.attribute",
+                  "meta.flow-mapping.yaml",
+                  "meta.property-name",
+                  "support.type.property-name",
+                  "support.type.property-name.css",
+                  "variable.object.property",
+                  "variable.other.property",
+                  "variable.other.object.property",
+                  "variable.other.member",
+                  "support.variable.property"
+               ],
+               "type": [
+                  "type",
+                  "struct",
+                  "class",
+                  "support.type",
+                  "support.class",
+                  "storage.type.built-in.primitive.cpp",
+                  "storage.type.built-in.primitive",
+                  "storage.type.primitive.cpp",
+                  "storage.type.primitive",
+                  "storage.type.built-in",
+                  "storage.type.glsl",
+                  "entity.name.type.alias",
+                  "entity.name.type.cpp",
+                  "entity.name.type.class",
+                  "entity.name.type.parameter",
+                  "entity.name.type.struct",
+                  "entity.other.inherited-class",
+                  "entity.other.attribute-name.class",
+                  "meta.function.definition.parameters"
+               ],
+               "method": [
+                  "meta.directive.vue",
+                  "entity.other.attribute-name.pseudo-class"
+               ],
+               "enumMember": [
+                  "variable.other.enummember"
+               ],
+               "string": [
+                  "string",
+                  "string.quoted",
+                  "string.unquoted",
+                  "string.template",
+                  "meta.attribute-selector",
+                  "variable.parameter.url"
+               ],
+               "stringDef": [
+                  "punctuation.definition.string",
+                  "string.template",
+                  "meta.attribute-selector",
+                  "variable.parameter.url"
+               ],
+               "keyword": [
+                  "keyword",
+                  "keyword.control",
+                  "keyword.other",
+                  "keyword.operator.override",
+                  "variable.language",
+                  "variable.language.this",
+                  "variable.language.self",
+                  "variable.language.super",
+                  "storage",
+                  "storage.type",
+                  "storage.modifier",
+                  "constant.language"
+               ],
+               "newdelete": [
+                  "keyword.operator.new",
+                  "keyword.operator.delete"
+               ],
+               "cast": [
+                  "keyword.operator.cast"
+               ],
+               "access": [
+                  "punctuation.separator.pointer-access",
+                  "punctuation.separator.dot-access",
+                  "punctuation.separator"
+               ],
+               "operator": [
+                  "punctuation.definition",
+                  "keyword.operator"
+               ],
+               "selfParameter": [
+                  "variable.language.this",
+                  "variable.language.self",
+                  "variable.language.special.self"
+               ],
+               "variable.defaultLibrary.readonly": [
+                  "const"
+               ]
+            }
+         }
+      ]
+   },
+   "devDependencies": {
+      "prettier": "2.3.0",
+      "tinycolor2": "1.4.2",
+      "vsce": "^1.75.0"
+   },
+   "scripts": {
+      "generate": "node generator/generate.js",
+      "dist": "node dist-package-task.mjs"
+   },
+   "__metadata": {
+      "installedTimestamp": 1645448762977
+   }
+}

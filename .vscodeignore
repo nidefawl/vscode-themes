@@ -1,0 +1,6 @@
+.vscode/**
+.vscode-test/**
+dist/**
+reference/**
+.yarnclean
+.gitignore

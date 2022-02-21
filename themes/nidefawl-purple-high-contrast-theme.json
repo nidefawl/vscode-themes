@@ -5146,6 +5146,33 @@
          }
       },
       {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
          "name": "source",
          "scope": [
             "source",

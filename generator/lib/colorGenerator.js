@@ -101,11 +101,6 @@ const generateColors = (tinycolor,config)=>{
          const colorString = color[`toHex${color.getAlpha() ===1?'':'8'}String`]();
          workspaceColors[workspaceColorName] = colorString;
       }
-      //Saving rule without any modifications
-      // encode(new tinycolor(config.baseTokenColors[t]),t)
-      //Saving rules for all modifications and all combinations of modifiers
-      // for (const v in config.modifications) ((Object.hasOwnProperty.call(config.modifications, v)) && encode(applyColors(t,[v]),t+'\n'+v))
-      // config.modifierCombinations.map(c=>c.split('.')).forEach(c=> encode(applyColors(t,c),t+'\n'+c.join(' ')))
    }
    return {semanticRules, fallBackRules, meta, workspaceColors};
 }

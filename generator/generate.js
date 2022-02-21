@@ -19,10 +19,10 @@ themes.forEach(t=>{
    //Contributing semantic token scopes. Not sure if this actually does anything.
    packageData.contributes.semanticTokenScopes.push({scopes:fallbacks})
    //Generating updated color values.
-   const  {semanticRules, fallBackRules, meta} = generateColors(tinycolor,t);
+   const  {semanticRules, fallBackRules, meta, workspaceColors} = generateColors(tinycolor,t);
    //Reading the theme definition JSON
    const cnf =JSON.parse(readFileSync(path,'utf-8'));
-   const {tokenColors} = cnf;
+   const {tokenColors, colors} = cnf;
    //Here we deal with existing textmate rules that might interfere with the fallbacks that were generated
    fallBackRules.forEach(({scope}) => tokenColors.map((r,i)=>(typeof r.scope === 'string'?scope.includes(r.scope):r.scope.some(i => scope.includes(i)))?{i,r}:null).filter(f=>f).sort((a,b)=>a.i<b.i?1:-1).forEach(({r,i})=>{
          //Deleting existing textmate rules that contradict our fallback rules
@@ -40,6 +40,7 @@ themes.forEach(t=>{
    //Updating the color theme with the new values
    cnf.semanticTokenColors = semanticRules;
    cnf.tokenColors = tokenColors.concat(fallBackRules);
+   cnf.colors = {...cnf.colors, ...workspaceColors};
    const stringRules = JSON.stringify(cnf,null,3);
    //Updating the readme with color stats if it's the main Theme
    const pathDiff= (relative(parse(readmeTemplatePath).dir,parse(readmePath).dir))

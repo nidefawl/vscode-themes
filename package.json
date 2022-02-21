@@ -156,6 +156,7 @@
                   "constant.language"
                ],
                "newdelete": [
+                  "newOperator",
                   "keyword.operator.new",
                   "keyword.operator.delete"
                ],

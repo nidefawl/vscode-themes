@@ -22,6 +22,7 @@ const generateColors = (tinycolor,config)=>{
    }
 
    const semanticRules={};
+   const workspaceColors={};
    const fallBackRules=[];
    //In this section we compile metadata about the generated colors
    const baseNumber = Object.keys(config.baseTokenColors).length;
@@ -81,14 +82,32 @@ const generateColors = (tinycolor,config)=>{
    }
    //Iterating over all defined basic tokens
    for (const t in config.baseTokenColors) {
-      if (!(Object.hasOwnProperty.call(config.baseTokenColors, t))) return;
+      if (!(Object.hasOwnProperty.call(config.baseTokenColors, t))) {
+         continue;
+      }
       //Saving rule without any modifications
       encode(new tinycolor(config.baseTokenColors[t]),t)
       //Saving rules for all modifications and all combinations of modifiers
       for (const v in config.modifications) ((Object.hasOwnProperty.call(config.modifications, v)) && encode(applyColors(t,[v]),t+'\n'+v))
       config.modifierCombinations.map(c=>c.split('.')).forEach(c=> encode(applyColors(t,c),t+'\n'+c.join(' ')))
    }
-   return {semanticRules,fallBackRules,meta};
+   for (const baseTokenName in config.workspaceColors) {
+      if (!(Object.hasOwnProperty.call(config.baseTokenColors, baseTokenName))) {
+         console.warn(`baseTokenName '{baseTokenName}' used in workspaceColors is not defined`)
+         continue;
+      }
+      const color = new tinycolor(config.baseTokenColors[baseTokenName]);
+      for (const workspaceColorName of config.workspaceColors[baseTokenName]) {
+         const colorString = color[`toHex${color.getAlpha() ===1?'':'8'}String`]();
+         workspaceColors[workspaceColorName] = colorString;
+      }
+      //Saving rule without any modifications
+      // encode(new tinycolor(config.baseTokenColors[t]),t)
+      //Saving rules for all modifications and all combinations of modifiers
+      // for (const v in config.modifications) ((Object.hasOwnProperty.call(config.modifications, v)) && encode(applyColors(t,[v]),t+'\n'+v))
+      // config.modifierCombinations.map(c=>c.split('.')).forEach(c=> encode(applyColors(t,c),t+'\n'+c.join(' ')))
+   }
+   return {semanticRules, fallBackRules, meta, workspaceColors};
 }
 
 /**

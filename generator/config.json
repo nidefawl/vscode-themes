@@ -7,12 +7,6 @@
          "uiTheme": "hc-black",
          "path": "./themes/nidefawl-purple-high-contrast-theme.json",
          "id": "nidefawl-purple-high-contrast",
-         "alt": {
-
-            "property": "#ff7f7f",
-            "method": "#df3f7f",
-            "property2": "#ff3f3f"
-         },
          "baseTokenColors": {
             "source": "#efefef",
             "parameter": "#7fbfff",
@@ -24,14 +18,14 @@
             "type": "#9f1fdf",
             "namespace": "#3f7f7f",
             "selfParameter": "#c46f64",
-            "method": "#ba54e2",
+            "method": "#8385f8",
             "function": "#7f7fdf",
             "macro": "#7fffff",
             "string": "#ffff3f",
             "stringDef": "#fff1a1",
             "constant": "#00ff00",
             "keyword": "#E79E3C",
-            "newdelete": "#ff3f7f",
+            "newdelete": "#ff3ff5",
             "access": "#00ff7f",
             "cast": "#ff00ff",
             "operator": "#ffff7f",
@@ -236,6 +230,7 @@
                "constant.language"
             ],
             "newdelete": [
+               "newOperator",
                "keyword.operator.new",
                "keyword.operator.delete"
             ],
@@ -270,6 +265,9 @@
             "declaration": [
                "definition"
             ],
+            "newdelete": [
+               "newOperator"
+            ],
             "function.defaultLibrary": [
                "magicFunction"
             ]
@@ -292,7 +290,90 @@
             "defaultLibrary.declaration",
             "defaultLibrary.async",
             "defaultLibrary.documentation"
-         ]
+         ],
+         "workspaceColors": {
+            "keyword": [
+               "debugTokenExpression.boolean",
+               "symbolIcon.keywordForeground",
+               "symbolIcon.booleanForeground"
+            ],
+            "constantliteral": [
+               "symbolIcon.numberForeground",
+               "debugTokenExpression.number"
+            ],
+            "constantliteralDef": [
+               "symbolIcon.unitForeground"
+            ],
+            "constant": [
+               "symbolIcon.constantForeground"
+            ],
+            "type": [
+               "symbolIcon.classForeground",
+               "symbolIcon.structForeground"
+            ],
+            "parameter": [
+               "symbolIcon.objectForeground",
+               "debugTokenExpression.value"
+            ],
+            "newdelete": [
+               "symbolIcon.nullForeground",
+               "debugTokenExpression.error"
+            ],
+            "namespace": [
+               "symbolIcon.namespaceForeground",
+               "symbolIcon.packageForeground"
+            ],
+            "method": [
+               "symbolIcon.constructorForeground",
+               "symbolIcon.methodForeground"
+            ],
+            "macro": [
+            ],
+            "access": [
+            ],
+            "cast": [
+            ],
+            "operator": [
+               "symbolIcon.operatorForeground",
+               "debugTokenExpression.name"
+            ],
+            "property": [
+               "symbolIcon.propertyForeground",
+               "symbolIcon.fieldForeground",
+               "symbolIcon.variableForeground"
+            ],
+            "function": [
+               "symbolIcon.functionForeground"
+            ],
+            "enum": [
+               "symbolIcon.enumeratorForeground",
+               "symbolIcon.functionForeground"
+            ],
+            "enumMember": [
+               "symbolIcon.enumeratorMemberForeground",
+               "symbolIcon.functionForeground"
+            ],
+            "typeParameter": [
+               "symbolIcon.typeParameterForeground"
+            ],
+            "source": [
+               "symbolIcon.arrayForeground",
+               "symbolIcon.colorForeground",
+               "symbolIcon.eventForeground",
+               "symbolIcon.fileForeground",
+               "symbolIcon.folderForeground",
+               "symbolIcon.interfaceForeground",
+               "symbolIcon.keyForeground",
+               "symbolIcon.moduleForeground",
+               "symbolIcon.referenceForeground",
+               "symbolIcon.snippetForeground"
+            ],
+            "string": [
+               "debugTokenExpression.string",
+               "symbolIcon.stringForeground",
+               "symbolIcon.textForeground"
+            ]
+         }
       }
    ],
    "readmePath": "./README.md",

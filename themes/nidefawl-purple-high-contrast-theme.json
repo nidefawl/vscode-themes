@@ -26,7 +26,9 @@
       "tab.border": "#12121200",
       "panel.border": "#12121200",
       "contrastActiveBorder": "#a200ff",
-      "tab.activeBorderTop": "#ffffff",
+      "editorLineNumber.foreground": "#7f7f7f7f",
+      "tab.activeBackground": "#5409cccc",
+      "tab.activeBorderTop": "#00000000",
       "tab.activeModifiedBorder": "#d400ff",
       "tab.inactiveModifiedBorder": "#d400ff",
       "tab.unfocusedActiveModifiedBorder": "#d400ff",
@@ -63,7 +65,6 @@
       "editor.selectionHighlightBorder": "#00000000",
       "editorOverviewRuler.selectionHighlightForeground": "#00ff80aa",
       "minimap.selectionOccurrenceHighlight": "#00ff80dd",
-      "tab.activeBackground": "#1f001fff",
       "selection.background": "#5409cccc",
       "sideBarSectionHeader.background": "#1f001f7f",
       "activityBar.foreground": "#a200ff",
@@ -91,18 +92,20 @@
       "editorBracketMatch.background": "#5409ccc0",
       "editorBracketMatch.border": "#5409ccf0",
       "minimap.warningHighlight": "#ffb30e",
+      "editorWarning.border": "#ffdd11cc",
       "editorPane.background": "#1f1f1f1f",
       "editor.background": "#050505",
       "editor.foreground": "#F8E1AA",
       "peekViewResult.background": "#0505057f",
       "breadcrumb.background": "#3f3f3f3f",
       "badge.background": "#0080ffaa",
-      "editorError.background": "#ff222290",
+      "editorError.background": "#dd55554f",
+      "editorError.border": "#dd5555",
       "editorBracketHighlight.unexpectedBracket.foreground": "#ff2200",
       "minimap.foregroundOpacity": "#000000dd",
       "minimap.findMatchHighlight": "#0080ffaa",
       "editor.findMatchHighlightBorder": "#ffffffaa",
-      "editor.findMatchHighlightBackground": "#0080ffaa",
+      "editor.findMatchHighlightBackground": "#0080ff3f",
       "editorOverviewRuler.findMatchForeground": "#0080ffaa",
       "diffEditor.diagonalFill": "#808080b0",
       "diffEditor.insertedTextBorder": "#00000000",
@@ -5053,6 +5056,33 @@
          ],
          "settings": {
             "foreground": "#ff3f7f"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
          }
       },
       {

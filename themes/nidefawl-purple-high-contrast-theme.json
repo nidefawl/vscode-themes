@@ -107,6 +107,12 @@
       "editor.findMatchHighlightBorder": "#ffffffaa",
       "editor.findMatchHighlightBackground": "#0080ff3f",
       "editorOverviewRuler.findMatchForeground": "#0080ffaa",
+      "editorInlayHint.background": "#4f4f6f5f",
+      "editorInlayHint.foreground": "#ffffff",
+      "editorInlayHint.parameterBackground": "#4f4f6f5f",
+      "editorInlayHint.parameterForeground": "#7fbfff",
+      "editorInlayHint.typeBackground": "#4f4f6f5f",
+      "editorInlayHint.typeForeground": "#9f1fdf",
       "diffEditor.diagonalFill": "#808080b0",
       "diffEditor.insertedTextBorder": "#00000000",
       "diffEditor.removedTextBorder": "#00000000",
@@ -5056,6 +5062,114 @@
          ],
          "settings": {
             "foreground": "#ff3f7f"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
+         }
+      },
+      {
+         "name": "comment",
+         "scope": [
+            "comment.line"
+         ],
+         "settings": {
+            "foreground": "#7c7c7c"
+         }
+      },
+      {
+         "name": "stringDef",
+         "scope": [
+            "string.template"
+         ],
+         "settings": {
+            "foreground": "#fff1a1"
+         }
+      },
+      {
+         "name": "keyword",
+         "scope": [
+            "variable.language.this"
+         ],
+         "settings": {
+            "foreground": "#e79e3c"
          }
       },
       {

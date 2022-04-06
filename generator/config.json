@@ -309,11 +309,13 @@
             ],
             "type": [
                "symbolIcon.classForeground",
-               "symbolIcon.structForeground"
+               "symbolIcon.structForeground",
+               "editorInlayHint.typeForeground"
             ],
             "parameter": [
                "symbolIcon.objectForeground",
-               "debugTokenExpression.value"
+               "debugTokenExpression.value",
+               "editorInlayHint.parameterForeground"
             ],
             "newdelete": [
                "symbolIcon.nullForeground",

@@ -101,6 +101,8 @@
       "badge.background": "#0080ffaa",
       "editorError.background": "#dd55554f",
       "editorError.border": "#dd5555",
+      "editorError.foreground": "#00000000",
+      "editorWarning.foreground": "#00000000",
       "editorBracketHighlight.unexpectedBracket.foreground": "#ff2200",
       "minimap.foregroundOpacity": "#000000dd",
       "minimap.findMatchHighlight": "#0080ffaa",

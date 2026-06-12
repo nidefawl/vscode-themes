@@ -1,5 +1,4 @@
-import { createVSIX } from 'vsce';
-
+import { createVSIX } from '@vscode/vsce';
 
 // disable 'do you want to continue?' from vsce
 process.env['VSCE_TESTS'] = 1;

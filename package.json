@@ -6,12 +6,12 @@
    "private": "true",
    "repository": {
       "type": "git",
-      "url": "https://github.com/nidefawl/xxxx"
+      "url": "https://github.com/nidefawl/vscode-themes"
    },
-   "homepage": "https://github.com/nidefawl/xxxx",
-   "version": "0.1.46",
+   "homepage": "https://github.com/nidefawl/vscode-themes",
+   "version": "0.1.48",
    "engines": {
-      "vscode": "^1.63.0"
+      "vscode": "^1.100.0"
    },
    "categories": [
       "Themes"
@@ -185,9 +185,9 @@
       ]
    },
    "devDependencies": {
-      "prettier": "2.3.0",
-      "tinycolor2": "1.4.2",
-      "vsce": "^1.75.0"
+      "prettier": "^3.3.2",
+      "tinycolor2": "^1.6.0",
+      "@vscode/vsce": "^3.1.0"
    },
    "scripts": {
       "generate": "node generator/generate.js",

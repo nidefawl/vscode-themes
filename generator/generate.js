@@ -40,6 +40,33 @@ themes.forEach(t=>{
    //Updating the color theme with the new values
    cnf.semanticTokenColors = semanticRules;
    cnf.tokenColors = tokenColors.concat(fallBackRules);
+   // ------------------------------------------------------------
+   // Final deduplication pass – ensure no duplicate token color rules
+   // ------------------------------------------------------------
+   /**
+    * Remove duplicate token color entries.
+    * Two entries are considered duplicates when they have the same
+    * `scope` (order‑insensitive) and identical `settings` (or no settings).
+    */
+   function dedupeTokenColors(arr) {
+      const seen = new Map(); // key -> true
+      const result = [];
+      for (const rule of arr) {
+         // Normalise scope: if it's an array, sort and join; otherwise keep string
+         const scopeKey = Array.isArray(rule.scope)
+            ? rule.scope.slice().sort().join('|')
+            : rule.scope;
+         const settingsKey = JSON.stringify(rule.settings || {});
+         const key = `${scopeKey}::${settingsKey}`;
+         if (!seen.has(key)) {
+            seen.set(key, true);
+            result.push(rule);
+         }
+      }
+      return result;
+   }
+
+   cnf.tokenColors = dedupeTokenColors(cnf.tokenColors);
    cnf.colors = {...cnf.colors, ...workspaceColors};
    const stringRules = JSON.stringify(cnf,null,3);
    //Updating the readme with color stats if it's the main Theme
